@@ -63,4 +63,25 @@ public class CalculadoraTeste {
         Assertions.assertEquals(0, calculadora.Multiplicar(0, 99));
     }
 
+    // DIVISAO
+    @Test
+    @DisplayName("Teste de divisao com numeros positivos")
+    public void TestaDivisaoComPositivos() {
+        Assertions.assertEquals(2, calculadora.Dividir(10, 5));
+    }
+
+    @Test
+    @DisplayName("Teste de divisao com numeros negativos")
+    public void TestaDivisaoComNegativos() {
+        Assertions.assertEquals(3, calculadora.Dividir(-9, -3));
+    }
+
+    @Test
+    @DisplayName("Teste de divisao com zero no numerador")
+    public void TestaDivisaoComZeroNumerador() {
+        Exception exception = Assertions.assertThrows(ArithmeticException.class, () -> {
+            calculadora.Dividir(10, 0);
+        });
+    }
+
 }
