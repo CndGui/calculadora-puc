@@ -44,4 +44,23 @@ public class CalculadoraTeste {
         Assertions.assertEquals(7, calculadora.Subtrair(7, 0));
     }
 
+    // MULTIPLICACAO
+    @Test
+    @DisplayName("Teste de multiplicao com numeros positivos")
+    public void TestaMultiplicacaoComPositivos() {
+        Assertions.assertEquals(12, calculadora.Multiplicar(3, 4));
+    }
+
+    @Test
+    @DisplayName("Teste de multiplicao com numeros negativos")
+    public void TestaMultiplicacaoComNegativos() {
+        Assertions.assertEquals(15, calculadora.Multiplicar(-3, -5));
+    }
+
+    @Test
+    @DisplayName("Teste de multiplicao com zero")
+    public void TestaMultiplicacaoComZero() {
+        Assertions.assertEquals(0, calculadora.Multiplicar(0, 99));
+    }
+
 }
