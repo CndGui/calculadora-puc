@@ -24,4 +24,24 @@ public class CalculadoraTeste {
     public void TestaSomaComZero() {
         Assertions.assertEquals(11, calculadora.Somar(11,0));
     }
+
+    // SUBTRACAO
+    @Test
+    @DisplayName("Teste de subtracao com numeros positivos")
+    public void TestaSubtracaoComPositivos() {
+        Assertions.assertEquals(2, calculadora.Subtrair(5, 3));
+    }
+
+    @Test
+    @DisplayName("Teste de subtracao com numeros negativos")
+    public void TestaSubtracaoComNegativos() {
+        Assertions.assertEquals(-1, calculadora.Subtrair(-4, -3));
+    }
+
+    @Test
+    @DisplayName("Teste de subtracao com zero")
+    public void TestaSubtracaoComZero() {
+        Assertions.assertEquals(7, calculadora.Subtrair(7, 0));
+    }
+
 }
